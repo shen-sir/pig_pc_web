@@ -1,7 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/diyiping.png">
-    <!-- <hello></hello> -->
+    <div class="page1">
+      <div class="top">
+        <img src="./assets/dingbulogo.png" >
+        <div class="text">
+          <p>猪队友</p>
+          <span>PIGYYMATE</span>
+        </div>
+      </div>
+      <div class="context">
+        <img src="./assets/iPhone-.png" class="left">
+        <div class="right">
+          <img src="./assets/zi.png" >
+          <p>猪队友是为开黑陪玩的玩家所做的网游一站式服务社交平台。突破了目前互联网游戏平台功能过于单一这一局限性。
+从开黑房间到大神陪玩再到贴吧论坛，猪队友包含了目前游戏圈所有玩家需求的功能。
+让小猪陪你一起杀入战场吧！</p>
+        </div>
+      </div>
+    </div>
     <div class="page2">
       <div class="center">
         <div class="left">
@@ -60,10 +76,47 @@ export default {
 
 <style lang = "less">
 #app {
-  min-width: 1200px;
+  min-width: 1300px;
   font-family:Arial,Helvetica;
-  img{
-    width: 100%;
+  .page1{
+    height: 700px;
+    border:1px solid black;
+    background: url("./assets/beijing.png") no-repeat ;
+    background-size:cover;
+    .top{
+      color: white;
+      font-style: normal;
+      img{
+        display: inline-block;
+        margin-left: 200px;
+        vertical-align:-16px;
+      }
+      .text{
+        display: inline-block;
+        p{
+          margin-top: 18px;
+          margin-bottom: 2px;
+          font-size: 26px;
+          background: url("./assets/dingbuxian.png") no-repeat 0 29px;
+        }
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+    .context{
+      img.left{
+        width: 365px;
+        margin-left: 244px;
+        margin-top: 126px;
+        vertical-align:-448px;
+      }
+      .right{
+        width: 648px;
+        border:1px solid black;
+        display: inline-block;
+      }
+    }
   }
   .page2{
     height:520px;
