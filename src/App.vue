@@ -15,6 +15,8 @@
           <p>猪队友是为开黑陪玩的玩家所做的网游一站式服务社交平台。突破了目前互联网游戏平台功能过于单一这一局限性。
 从开黑房间到大神陪玩再到贴吧论坛，猪队友包含了目前游戏圈所有玩家需求的功能。
 让小猪陪你一起杀入战场吧！</p>
+          <div class="btn iphone">苹果客户端下载<!-- <span></span> <--><img src="" alt=""></--></div>
+          <div class="btn androd">苹果客户端下载<span></span></div>
         </div>
       </div>
     </div>
@@ -83,6 +85,7 @@ export default {
     border:1px solid black;
     background: url("./assets/beijing.png") no-repeat ;
     background-size:cover;
+    margin-bottom: 180px;
     .top{
       color: white;
       font-style: normal;
@@ -109,12 +112,63 @@ export default {
         width: 365px;
         margin-left: 244px;
         margin-top: 126px;
-        vertical-align:-448px;
+        vertical-align:-256px;
       }
       .right{
         width: 648px;
-        border:1px solid black;
+        margin-left: 145px;
         display: inline-block;
+        img{
+          margin-left: 32px;
+        }
+        p{
+          width: 612px;
+          height: 154px;
+          font-size: 20px;
+          color: white;
+          line-height: 34px;
+          border-bottom: 2px solid white;
+          padding: 50px 20px 20px 20px;
+          margin-top: -37px;
+          background: url("./assets/xiankuang.png") no-repeat;
+          background-size: cover;
+        }
+        .btn{
+          display: inline-block;
+          width: 180px;
+          height: 62px;
+          border-radius: 50px;
+          line-height: 62px;
+          text-align: right;
+          padding-right: 25px;
+          background-color: rgba(255, 255, 255, 0.5);
+          font-size: 16px;
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0);
+          margin-top: 58px;
+        }
+        
+        .btn.iphone{
+          background: url("./assets/apple.png") no-repeat;
+          background-position: 27px 11px;
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-left: 78px;
+          /*span{
+            width: 164px;
+            height: 176px;
+            display: inline-block;
+          }*/
+        }
+        .btn.androd{
+          background: url("./assets/android.png") no-repeat;
+          background-position: 27px 11px;
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-left: 88px;
+        }
+        .btn:hover{
+          border: 1px solid rgba(255, 255, 255, 1);
+          background-color: #ffda26;
+        }
       }
     }
   }
