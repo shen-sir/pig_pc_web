@@ -1,6 +1,6 @@
 # pig_pc_web
 
-> 猪队友PC官方  vue.js2.0 project
+> vue.js2.0 project
 
 ## Build Setup
 
