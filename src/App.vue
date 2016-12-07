@@ -15,8 +15,9 @@
           <p>猪队友是为开黑陪玩的玩家所做的网游一站式服务社交平台。突破了目前互联网游戏平台功能过于单一这一局限性。
 从开黑房间到大神陪玩再到贴吧论坛，猪队友包含了目前游戏圈所有玩家需求的功能。
 让小猪陪你一起杀入战场吧！</p>
-          <div class="btn iphone">苹果客户端下载<!-- <span></span> <--><img src="" alt=""></--></div>
-          <div class="btn androd">苹果客户端下载<span></span></div>
+          <div @mouseover="hoverimg"  @mouseout="hoverimg" class="btn iphone">苹果客户端下载</div>
+          <div @mouseover="hoverimg"  @mouseout="hoverimg" class="btn androd">苹果客户端下载</div>
+          <img v-bind:style="{opacity:opal}" class="hl" src="./assets/erweima.png"><img v-bind:style="{opacity:opar}" class="hr" src="./assets/erweima.png">
         </div>
       </div>
     </div>
@@ -37,10 +38,10 @@
       <div class="center">
         <img src="./assets/disanping-tu.png">
         <div class="right">
-          <p class="name">猪队友 <strong>主页</strong> </p>
-          <p class="describe">与小猪杀入战场吧</p>
-          <p class="text">"猪队友" 是一款多功能社交开黑平台。玩家可以在右上角个人中心包装自己。</p>
-          <p class="text">添加个性标签，上线匹配开黑队友或直接多人开黑。点击小猪上线与好友一起享受开黑乐趣吧。</p>
+          <p class="name">猪队友 <strong>开黑房间</strong> </p>
+          <p class="describe">与基友“面对面”开黑</p>
+          <p class="text">独特的开黑房间包括了语音，视频，文字三种交流方式。房间中不仅包括了拉人踢人查看个人信息这些基础功能。</p>
+          <p class="text">还包含了红包打赏和投票选举当局MVP等附加功能。</p>
         </div>
       </div>
     </div>
@@ -50,7 +51,11 @@
         <p class="describe">找陪玩或是当陪玩一切随心而变</p>
         <p class="text">一个人玩游戏是不是有些寂寞?<br>四缺一是不是有些无奈说不出?<br>找些志同道合的人一起开黑吧!</p>
       </div>
-      <div class="carousel"></div>
+      <div class="carousel">
+        <img src="./assets/tu.png">
+      </div>
+      <img class="left" src="./assets/sanjiao-yi.png" >
+      <img class="right" src="./assets/sanjiao-er.png" >
     </div>
     <div class="page5">
       <div class="center">
@@ -62,6 +67,10 @@
         <img src="./assets/diwuping.png">
       </div>
     </div>
+    <div class="bottom">
+      <p>北京高手互娱网络技术股份有限公司 &nbsp&nbsp  kingdowin.com  &nbsp&nbsp 网络文化经营许可证：京网文（2016）3480-419号</p>
+      <p>电信与信息服务业务经营许可证：京ICP证100654号 &nbsp&nbsp 网站备案号：11010502026270</p>
+    </div>
   </div>
 </template>
 
@@ -70,6 +79,38 @@
 
 export default {
   name: 'app',
+  data(){
+      return {
+        opal:0,
+        opar:0
+      }
+    },
+  methods:{
+    hoverimg(e){
+      // console.log(e.)
+      if(e.target.className == "btn iphone"){
+        switch(e.type){
+          case 'mouseover':
+          this.opal = 1;
+          break;
+          case 'mouseout':
+          this.opal = 0;
+          break;
+        }
+      }
+      if(e.target.className == "btn androd"){
+        switch(e.type){
+          case 'mouseover':
+          this.opar = 1;
+          break;
+          case 'mouseout':
+          this.opar = 0;
+          break;
+        }
+      }
+      
+    }
+  },
   components: {
     // Hello
   }
@@ -78,7 +119,7 @@ export default {
 
 <style lang = "less">
 #app {
-  min-width: 1300px;
+  min-width: 1450px;
   font-family:Arial,Helvetica;
   .page1{
     height: 700px;
@@ -112,7 +153,7 @@ export default {
         width: 365px;
         margin-left: 244px;
         margin-top: 126px;
-        vertical-align:-256px;
+        vertical-align:-2px;
       }
       .right{
         width: 648px;
@@ -153,11 +194,6 @@ export default {
           background-position: 27px 11px;
           background-color: rgba(255, 255, 255, 0.5);
           margin-left: 78px;
-          /*span{
-            width: 164px;
-            height: 176px;
-            display: inline-block;
-          }*/
         }
         .btn.androd{
           background: url("./assets/android.png") no-repeat;
@@ -169,11 +205,17 @@ export default {
           border: 1px solid rgba(255, 255, 255, 1);
           background-color: #ffda26;
         }
+        .hl{
+          margin-left: 102px;
+        }
+        .hr{
+          margin-left: 142px;
+        }
       }
     }
   }
   .page2{
-    height:520px;
+    height:510px;
     .center{
       width: 965px;
       margin: 0 auto;
@@ -213,10 +255,12 @@ export default {
     }
   }
   .page3{
-    height: 753px;
+    height: 670px;
+    overflow:hidden;
     /*border:1px solid black;*/
     background: url("./assets/disanping-sanjiao.png") no-repeat 30px 0px;
     background-size: 1264px;
+    background-position:right;
     .center{
       width: 1004px;
       height: 410px;
@@ -224,7 +268,7 @@ export default {
       padding-left: 156px;
       /*border:1px solid black;*/
       margin: 0 auto;
-      margin-top: 115px;
+      margin-top: 164px;
       -moz-box-shadow:0px 2px 17px rgba(221, 196, 242, 0.5); 
       -webkit-box-shadow:0px 2px 17px rgba(221, 196, 242, 0.5); 
       box-shadow:0px 2px 17px rgba(221, 196, 242, 0.5);
@@ -259,7 +303,19 @@ export default {
   }
   .page4{
     height: 760px;
-    border:1px solid black;
+    /*border:1px solid black;*/
+    position: relative;
+    /*background: url("./assets/sanjiao.png") no-repeat;
+    background-size: contain;*/
+    .left,.right{
+      position: absolute;
+    }
+    .left{
+      top: 0;
+    }
+    .right{
+      right: 0;
+    }
     .center{
       text-align: center;
       width: 283px;
@@ -284,15 +340,19 @@ export default {
       }
     }
     .carousel{
-      border:1px solid black;
+      /*border:1px solid black;*/
       width: 666px;
       height: 480px;
       margin: 0 auto;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
   .page5{
-    height: 770px;
-    border:1px solid black;
+    height: 670px;
+    /*border:1px solid black;*/
     .center{
       text-align: center;
       width: 1070px;
@@ -336,6 +396,14 @@ export default {
     }
 
   }
-
+  .bottom{
+    /*border:1px solid black;*/
+    height: 88px;
+    background: url("./assets/zhandianditu.png") repeat;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding-top: 68px;
+  }
 }
 </style>
