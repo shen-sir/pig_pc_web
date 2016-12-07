@@ -123,8 +123,8 @@ export default {
   font-family:Arial,Helvetica;
   .page1{
     height: 700px;
-    border:1px solid black;
-    background: url("./assets/beijing.png") no-repeat ;
+    /*border:1px solid black;*/
+    background: url("../static/bj.png") no-repeat ;
     background-size:cover;
     margin-bottom: 180px;
     .top{
