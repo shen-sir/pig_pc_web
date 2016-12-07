@@ -8,16 +8,6 @@
           <span>PIGYYMATE</span>
         </div>
       </div>
-      <div class="context">
-        <img src="./assets/iPhone-.png" class="left">
-        <div class="right">
-          <img src="./assets/zi.png" >
-          <p>猪队友是为开黑陪玩的玩家所做的网游一站式服务社交平台。突破了目前互联网游戏平台功能过于单一这一局限性。
-从开黑房间到大神陪玩再到贴吧论坛，猪队友包含了目前游戏圈所有玩家需求的功能。
-让小猪陪你一起杀入战场吧！</p>
-
-        </div>
-      </div>
     </div>
     <div class="page2">
       <div class="center">
