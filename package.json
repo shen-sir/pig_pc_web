@@ -1,7 +1,7 @@
 {
   "name": "pig_pc_web",
   "version": "1.0.0",
-  "description": "猪队友PC官方  vue.js2.0 project",
+  "description": "vue.js2.0 project",
   "author": "shen-sir <674735426@qq.com>",
   "private": true,
   "scripts": {
